@@ -161,8 +161,6 @@ void CLogger::write_log(LOGS_LEVEL level, const char *format,...){
             snprintf(new_log,255,"%s%s%s.%d",dir_name,tail,log_name,m_count/m_split_lines);
         }
 
-        fclose(m_fp);
-
         m_fp=fopen(new_log,"a");
         this->log_file_name=new_log;
 
